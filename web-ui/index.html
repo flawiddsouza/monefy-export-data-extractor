@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monefy Export Data Extractor</title>
+    <style>
+    * {
+        box-sizing: border-box;
+    }
+    </style>
+</head>
+<body style="width: min(100%, 30rem); padding: 1rem;">
+    <div style="border: 1px solid lightgrey; padding: 1rem;">
+        <div>Monefy uses SQLite3 for its database. When exporting this database, Monefy encrypts the sqlite3 database using a hardcoded key to make the export unusable unless it's imported directly into Monefy. This tool will decrypt the database and give you the original sqlite3 database.</div>
+        <div style="margin-top: 1rem">The decryption happens completely in browser and no data is transmitted anywhere.</div>
+        <form id="form" style="margin-top: 1rem">
+            <div>
+                <input type="file" id="file" required>
+            </div>
+            <div style="margin-top: 1rem">
+                <button type="submit">Decrypt and download</button>
+            </div>
+        </form>
+    </div>
+    <div style="margin-top: 1rem">
+        You can find the source code for this <a href="https://github.com/flawiddsouza/monefy-export-data-extractor">here</a>.
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
