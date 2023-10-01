@@ -14,6 +14,10 @@
     <div style="border: 1px solid lightgrey; padding: 1rem;">
         <div>Monefy uses SQLite3 for its database. When exporting this database, Monefy encrypts the sqlite3 database using a hardcoded key to make the export unusable unless it's imported directly into Monefy. This tool will decrypt the database and give you the original sqlite3 database.</div>
         <div style="margin-top: 1rem">The decryption happens completely in browser and no data is transmitted anywhere.</div>
+        <div style="margin-top: 1rem">
+            <div>How to export from Monefy?</div>
+            Open Monefy > Click the 3 dot menu on the top right > Settings > Create data backup
+        </div>
         <form id="form" style="margin-top: 1rem">
             <div>
                 <input type="file" id="file" required>
